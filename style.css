@@ -83,11 +83,7 @@ hr{
   margin:0px 5px;
   
   }
-.item img {
-  width: 50%;
-  padding-bottom:auto;
-  float:left;
-}
+
 .item-info {
   display:inline-block;
   text-align:center;
@@ -110,8 +106,7 @@ label, input, textarea {
 }
 form{
   width:50%;
-  margin: 0 auto ;
-  
+  margin: 0 auto ;  
 }
 form textarea {
   resize: none;
@@ -132,3 +127,73 @@ form textarea {
 p {
   text-align:justify;
 }
+
+@media screen and (min-width:1024px){
+  .menu-button{
+    display:none;
+  }
+  .menu-button-checkbox{
+    display:none;
+  }
+  .item img {
+  width: 50%;
+  padding-bottom:auto;
+  float:left;
+  }
+}
+@media screen and (max-width:1023px){
+    .menu-button {
+    float: right;
+    font-size: 25px;
+    line-height: 40px;
+    color: black;
+    background: transparent;
+    padding: 0 15px;
+    border: 0;
+  }
+  .menu-button-checkbox{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 55px;
+    height: 40px;
+    opacity:0;
+  }
+  .Navlist{
+    margin-top: 0;
+    padding-left: 0;
+    position: fixed;
+    right: 0;
+    top: 40px;
+    width: 150px;
+    height: 100%;
+    background: red;
+    display:none;
+  }
+   .menu-button-checkbox:checked ~ .Navlist {
+    display: block;
+  }
+  .photo img{
+    display:block;
+    width:100%;
+  }
+  .about-me{
+    width:100%;
+  }
+  .item {
+    max-width: 100%;
+  }
+  .item img {
+    width:100%;
+  }
+  .item-info {
+  display:block;
+  text-align:left;
+  width:100%;
+  }
+  form{
+  width:100%;
+  margin: 0 auto ; 
+  }
+}
+
